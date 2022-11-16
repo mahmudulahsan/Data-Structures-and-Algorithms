@@ -24,20 +24,23 @@ int a[1000][1000];
 int main()
 {
     //fastio
-    int n;
-    cin>>n;
 
-    for(int i=0;i<n;i++){
-        for(int j=0;j<n;j++){
-            cin>>a[i][j];
-        }
+    ///Enter number of nodes and edges
+    int n, m;
+    cin>>n>>m;
+
+    for(int i=1;i<=m;i++){
+        int x, y, w;
+        cin>>x>>y>>w;
+        a[x][y]=w;
+        a[y][x]=w;
     }
 
-    for(int i=0;i<n;i++){
-        cout<<"node"<<i+1<<" is connected to: ";
+    for(int i=1;i<=n;i++){
+        cout<<"node"<<i<<" is connected to: ";
         for(int j=0;j<n;j++){
             if(a[i][j])
-                cout<<j+1<<" ";
+                cout<<j<<" ";
         }nl;
     }
 
