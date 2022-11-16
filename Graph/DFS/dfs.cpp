@@ -71,6 +71,7 @@ int main()
     return 0;
 }
 
+///Sample input
 //6 7
 //1 2
 //1 4
