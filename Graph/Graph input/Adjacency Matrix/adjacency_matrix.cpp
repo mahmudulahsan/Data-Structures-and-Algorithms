@@ -37,7 +37,7 @@ int main()
     }
 
     for(int i=1;i<=n;i++){
-        cout<<"node"<<i<<" is connected to: ";
+        cout<<"node "<<i<<" is connected to: ";
         for(int j=0;j<n;j++){
             if(a[i][j])
                 cout<<j<<" ";
@@ -46,4 +46,14 @@ int main()
 
     return 0;
 }
+
+//sample input
+//6 7
+//1 2 10
+//1 4 30
+//4 2 100
+//2 5 20
+//4 5 40
+//5 3 50
+//6 3 60
 
