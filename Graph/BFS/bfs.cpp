@@ -54,7 +54,6 @@ int main()
         int u, v;
         cin>>u>>v;
         arr[u].pb(v);
-        arr[v].pb(u);
     }
 
     nl;
