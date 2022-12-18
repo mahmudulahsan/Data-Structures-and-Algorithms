@@ -7,7 +7,7 @@ void printShortestPath(int currentVertex, vector<int> parents)
 		return;
 	}
 	printShortestPath(parents[currentVertex], parents);
-	cout<<currentVertex<<" ";
+	cout<<(char)(currentVertex+'A')<<" ";
 }
 
 void printSolution(int start, vector<int> distances, vector<int> parents)
@@ -18,8 +18,8 @@ void printSolution(int start, vector<int> distances, vector<int> parents)
 
 	for (int vi=0;vi<n;vi++) {
 		if (vi != start) {
-			cout<<"\n"<<start<<" -> ";
-			cout<<vi<< "\t";
+			cout<<"\n"<<(char)(start+'A')<<" -> ";
+			cout<<(char)(vi+'A')<< "\t";
 			cout<<" "<<distances[vi] << "\t\t";
 			printShortestPath(vi, parents);
 		}

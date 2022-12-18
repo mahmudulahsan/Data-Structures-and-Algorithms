@@ -3,15 +3,12 @@
 using namespace std;
 
 priority_queue<pair<int, int>, vector<pair<int, int> >, greater<pair<int, int>>>pq;
-vector<int> dist(1000001);
+vector<int> dist(1000001, 1e9); //all nodes except src is infinity(a large number)
 list<pair<int, int>> adj[1000001];
 
 void dijkstra(int src)
 {
     //initially distance of src is 0
-    //all nodes except src is infinity(a large number)
-    for(int i=0;i<1000001;i++)
-        dist[i]=1e9;
     dist[src]=0;
     pq.push({0, src});
 
@@ -23,7 +20,7 @@ void dijkstra(int src)
             int edgeWeight = (*it).first;
             int weight = (*it).second;
 
-            //relaxation
+            ///relaxation
             if (dist[edgeWeight] > dist[node] + weight) {
                 dist[edgeWeight] = dist[node] + weight;
                 pq.push(make_pair(dist[edgeWeight], edgeWeight));
