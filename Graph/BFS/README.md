@@ -1,3 +1,3 @@
 # bfs 
 
-![alt text](https://ibb.co/Y7pYWYq)
+![alt text](https://i.ibb.co/27gm6mf/bfs.jpg)
